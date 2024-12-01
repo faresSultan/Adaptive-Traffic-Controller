@@ -1,4 +1,4 @@
-module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_counter);
+module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_counter,load_value);
     parameter Ga = 000 ;
     parameter Gb = 001 ;
     parameter Gc = 010 ;
@@ -13,6 +13,7 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
     input [4:0] counter_value;   // internal counter value
     output reg[2:0] Ta,Tb,Tc,Td;    // traffic lights  001 ->green, 010 -> orange, 100 -> red
     output reg load_counter;    // load enable
+    output reg [4:0] load_value; // value to be loaded in the counter after a trasition, 30 -> green, 3 -> orange
 
 
     reg [2:0] current_state, next_state;
@@ -124,6 +125,8 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
                 Tb = 3'b100;   // red
                 Tc = 3'b100;   // red
                 Td = 3'b100;   // red
+                load_counter = (current_state != next_state);  // enable load only if transition in colors happens
+                load_value = 30;                               // 30 sec for green light
             end
 
             Gb: begin
@@ -131,6 +134,8 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
                 Ta = 3'b100;   // red
                 Tc = 3'b100;   // red
                 Td = 3'b100;   // red
+                load_counter = (current_state != next_state);  // enable load only if transition in colors happens
+                load_value = 30;                               // 30 sec for green light
             end
 
             Gc: begin
@@ -138,6 +143,8 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
                 Ta = 3'b100;   // red
                 Tb = 3'b100;   // red
                 Td = 3'b100;   // red
+                load_counter = (current_state != next_state);  // enable load only if transition in colors happens
+                load_value = 30;                               // 30 sec for green light
             end
 
             Gd: begin
@@ -145,6 +152,8 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
                 Ta = 3'b100;   // red
                 Tb = 3'b100;   // red
                 Tc = 3'b100;   // red
+                load_counter = (current_state != next_state);  // enable load only if transition in colors happens
+                load_value = 30;                               // 30 sec for green light
             end
 
             Oa: begin
@@ -152,6 +161,8 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
                 Tb = 3'b100;   // red
                 Tc = 3'b100;   // red
                 Td = 3'b100;   // red
+                load_counter = (current_state != next_state);  // enable load only if transition in colors happens
+                load_value = 3;                                // 3 sec for orange light
             end
 
             Ob: begin
@@ -159,6 +170,8 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
                 Ta = 3'b100;   // red
                 Tc = 3'b100;   // red
                 Td = 3'b100;   // red
+                load_counter = (current_state != next_state);  // enable load only if transition in colors happens
+                load_value = 3;                                // 3 sec for orange light
             end
 
             Oc: begin
@@ -166,6 +179,8 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
                 Ta = 3'b100;   // red
                 Tb = 3'b100;   // red
                 Td = 3'b100;   // red
+                load_counter = (current_state != next_state);  // enable load only if transition in colors happens
+                load_value = 3;                                // 3 sec for orange light
             end
 
             Od: begin
@@ -173,8 +188,16 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
                 Ta = 3'b100;   // red
                 Tb = 3'b100;   // red
                 Tc = 3'b100;   // red
+                load_counter = (current_state != next_state);  // enable load only if transition in colors happens
+                load_value = 3;                                // 3 sec for orange light
             end 
-            default: 
+
+            default: begin
+                Ta = 3'b100;   // red
+                Tb = 3'b100;   // red
+                Tc = 3'b100;   // red
+                Td = 3'b100;   // red
+            end
         endcase
     end 
 
