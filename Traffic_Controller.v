@@ -1,11 +1,4 @@
 module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_counter);
-    
-    input clk,rst_n;
-    input [1:0] Sa,Sb,Sc,Sd;  // traffic sensors
-    input [4:0] counter_value;   // internal counter value
-    output [2:0] Ta,Tb,Tc,Td;    // traffic lights
-    output load_counter;    // load enable
-
     parameter Ga = 000 ;
     parameter Gb = 001 ;
     parameter Gc = 010 ;
@@ -14,6 +7,13 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
     parameter Ob = 101 ;
     parameter Oc = 110 ;
     parameter Od = 111 ;
+
+    input clk,rst_n;
+    input [1:0] Sa,Sb,Sc,Sd;  // traffic sensors
+    input [4:0] counter_value;   // internal counter value
+    output reg[2:0] Ta,Tb,Tc,Td;    // traffic lights  001 ->green, 010 -> orange, 100 -> red
+    output reg load_counter;    // load enable
+
 
     reg [2:0] current_state, next_state;
 
@@ -112,9 +112,71 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
                     else  // if any ubnormal case happened -> regular flow
                         next_state<= Ga;  
                 end
-            default: 
+            default: next_state <= Ga;
         endcase
     end
+
+    // output logic
+    always @(current_state) begin
+        case (current_state)
+            Ga: begin
+                Ta = 3'b001;   // green
+                Tb = 3'b100;   // red
+                Tc = 3'b100;   // red
+                Td = 3'b100;   // red
+            end
+
+            Gb: begin
+                Tb = 3'b001;   // green
+                Ta = 3'b100;   // red
+                Tc = 3'b100;   // red
+                Td = 3'b100;   // red
+            end
+
+            Gc: begin
+                Tc = 3'b001;   // green
+                Ta = 3'b100;   // red
+                Tb = 3'b100;   // red
+                Td = 3'b100;   // red
+            end
+
+            Gd: begin
+                Td = 3'b001;   // green
+                Ta = 3'b100;   // red
+                Tb = 3'b100;   // red
+                Tc = 3'b100;   // red
+            end
+
+            Oa: begin
+                Ta = 3'b010;   // orange
+                Tb = 3'b100;   // red
+                Tc = 3'b100;   // red
+                Td = 3'b100;   // red
+            end
+
+            Ob: begin
+                Tb = 3'b010;   // orange
+                Ta = 3'b100;   // red
+                Tc = 3'b100;   // red
+                Td = 3'b100;   // red
+            end
+
+            Oc: begin
+                Tc = 3'b010;   // orange
+                Ta = 3'b100;   // red
+                Tb = 3'b100;   // red
+                Td = 3'b100;   // red
+            end
+
+            Od: begin
+                Td = 3'b010;   // orange
+                Ta = 3'b100;   // red
+                Tb = 3'b100;   // red
+                Tc = 3'b100;   // red
+            end 
+            default: 
+        endcase
+    end 
 
     
 endmodule
