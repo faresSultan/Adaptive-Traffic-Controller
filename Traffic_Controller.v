@@ -29,7 +29,7 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
             current_state <= Ga;
             //previous_state <=Ga;
            // load_counter<=1;
-            load_value<=30;
+           // load_value<=30;         ////////Changed During Synthesis
         end
         else begin
             current_state <= next_state;   
