@@ -20,7 +20,7 @@ module Topmodule (
     Traffic_Controller FSM (.Sa(Sa_reading),.Sb(Sb_reading),.Sc(Sc_reading),.Sd(Sd_reading),.clk(clk),.rst_n(rst_n)
     ,.counter_value(counter_output),.Ta(Ta),.Tb(Tb),.Tc(Tc),.Td(Td),.load_counter(load_en),.load_value(load_value));
 
-    counter internal_counter (.clk(clk),.load(load_en),.data(load_value),.count(counter_output));
+    counter internal_counter (.clk(clk),.load(load_en),.data(load_value),.count(counter_output),.rst_n(rst_n));
 
     assign Sa_reading = Sa[0] + Sa[1];
     assign Sb_reading = Sb[0] + Sb[1];
