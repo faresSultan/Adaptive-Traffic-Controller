@@ -7,7 +7,7 @@ module counter(clk,rst_n,load,data,count);
   always@(posedge clk,negedge rst_n) 
   begin
     if (!rst_n) begin
-      count<=30;
+      count <= 31;
     end
     else begin
       if(load)    
