@@ -147,7 +147,6 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
                 Ta = 3'b100;   // red
                 Tc = 3'b100;   // red
                 Td = 3'b100;   // red
-                                               // 30 sec for green light
             end
 
             Gc: begin
@@ -155,7 +154,6 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
                 Ta = 3'b100;   // red
                 Tb = 3'b100;   // red
                 Td = 3'b100;   // red
-                                               // 30 sec for green light
             end
 
             Gd: begin
@@ -163,7 +161,6 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
                 Ta = 3'b100;   // red
                 Tb = 3'b100;   // red
                 Tc = 3'b100;   // red
-                                               // 30 sec for green light
             end
 
             Oa: begin
@@ -171,7 +168,6 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
                 Tb = 3'b100;   // red
                 Tc = 3'b100;   // red
                 Td = 3'b100;   // red
-                                                // 3 sec for orange light
             end
 
             Ob: begin
@@ -179,7 +175,6 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
                 Ta = 3'b100;   // red
                 Tc = 3'b100;   // red
                 Td = 3'b100;   // red
-                                                // 3 sec for orange light
             end
 
             Oc: begin
@@ -187,7 +182,6 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
                 Ta = 3'b100;   // red
                 Tb = 3'b100;   // red
                 Td = 3'b100;   // red
-                                              // 3 sec for orange light
             end
 
             Od: begin
@@ -195,7 +189,6 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
                 Ta = 3'b100;   // red
                 Tb = 3'b100;   // red
                 Tc = 3'b100;   // red
-                                // 3 sec for orange light
             end 
 
             default: begin
@@ -207,6 +200,6 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
         endcase
     end 
     assign load_counter = (current_state !== next_state);
-    assign load_value = (next_state > 3 ? 3 : 30);
+    assign load_value = (next_state > 3 ? 3 : 30); 
 
 endmodule
