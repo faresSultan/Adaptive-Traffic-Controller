@@ -123,7 +123,7 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
                         // Determine next state based on traffic priorities
                         if ((Sa >= Sb) && (Sa >= Sc) && (Sa >= Sd)) 
                             next_state = Ga;
-                        else if ((Sb >= Sa) && (Sb >= Sc) && (Sa >= Sd))   
+                        else if ((Sb >= Sa) && (Sb >= Sc) && (Sb >= Sd))   
                             next_state = Gb;
                         else  
                             next_state = Gc; // Default to Ga 
