@@ -17,8 +17,6 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
 
 
     reg [2:0] current_state, next_state;
-    assign load_counter = (current_state !== next_state);
-    assign load_value = (next_state > 3 ? 3 : 30);
 
     //---
 
@@ -208,5 +206,7 @@ module Traffic_Controller (Sa,Sb,Sc,Sd,clk,rst_n,counter_value,Ta,Tb,Tc,Td,load_
             end
         endcase
     end 
+    assign load_counter = (current_state !== next_state);
+    assign load_value = (next_state > 3 ? 3 : 30);
 
 endmodule
