@@ -1,0 +1,45 @@
+ 
+****************************************
+Report : area
+Design : Topmodule
+Version: K-2015.06
+Date   : Mon Dec 16 03:03:19 2024
+****************************************
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/IC/Labs/lab_dc/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+Number of ports:                           68
+Number of nets:                           186
+Number of cells:                          130
+Number of combinational cells:            118
+Number of sequential cells:                10
+Number of macros/black boxes:               0
+Number of buf/inv:                         31
+Number of references:                       4
+
+Combinational area:                841.340514
+Buf/Inv area:                      143.557404
+Noncombinational area:             210.629299
+Macro/Black Box area:                0.000000
+Net Interconnect area:           15726.745514
+
+Total cell area:                  1051.969813
+Total area:                      16778.715327
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area          Local cell area
+                                  ------------------  --------------------------- 
+Hierarchical cell                 Absolute   Percent  Combi-    Noncombi-  Black-
+                                  Total      Total    national  national   boxes   Design
+--------------------------------  ---------  -------  --------  ---------  ------  ------------------
+Topmodule                         1051.9698    100.0   70.6020     0.0000  0.0000  Topmodule
+FSM                                743.6744     70.7  662.4821    81.1923  0.0000  Traffic_Controller
+internal_counter                   237.6934     22.6  108.2564   129.4370  0.0000  counter
+--------------------------------  ---------  -------  --------  ---------  ------  ------------------
+Total                                                 841.3405   210.6293  0.0000
+
+1

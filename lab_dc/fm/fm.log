@@ -1,0 +1,220 @@
+
+                                 Formality (R)
+
+               Version L-2016.03-SP1 for linux64 - Apr 13, 2016 
+
+                    Copyright (c) 1988 - 2016 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+
+  ** Highlights of Formality (R) Version L-2016.03 **
+   - New alternate verification strategies for resolving inconclusive verifications
+   - Automation for deploying alternate strategies
+   - New command to export the mapping of reference to implementation registers
+   - New capability to combine PG and low power information from db libraries with Verilog functional models
+
+   * Please refer to the Formality Release Notes for details and additional enhancements
+
+Build: 4031317
+Hostname: IC (RHEL64)
+Current time: Mon Dec 16 02:11:32 2024
+
+Loading db file '/opt/Synopsys/Formality2016/libraries/syn/gtech.db'
+############################  Search PATH ################################
+set PROJECT_PATH /home/IC/Labs
+/home/IC/Labs
+lappend search_path $PROJECT_PATH/lab_dc/std_cells
+/home/IC/Labs/lab_dc/std_cells
+lappend search_path $PROJECT_PATH/lab_dc/rtl
+/home/IC/Labs/lab_dc/std_cells /home/IC/Labs/lab_dc/rtl
+lappend search_path $PROJECT_PATH/lab_dc/syn
+/home/IC/Labs/lab_dc/std_cells /home/IC/Labs/lab_dc/rtl /home/IC/Labs/lab_dc/syn
+lappend search_path $PROJECT_PATH/lab_dc/syn/netlists
+/home/IC/Labs/lab_dc/std_cells /home/IC/Labs/lab_dc/rtl /home/IC/Labs/lab_dc/syn /home/IC/Labs/lab_dc/syn/netlists
+########################### Define Top Module ############################
+set top_module Topmodule
+Topmodule
+######################### Formality Setup File ###########################
+set synopsys_auto_setup true
+true
+set_svf "../syn/$top_module.svf"
+SVF set to '../syn/Topmodule.svf'.
+1
+####################### Read Reference tech libs ########################
+set SSLIB "/home/IC/Labs/lab_dc/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db"
+/home/IC/Labs/lab_dc/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db
+set TTLIB "/home/IC/Labs/lab_dc/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db"
+/home/IC/Labs/lab_dc/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db
+set FFLIB "/home/IC/Labs/lab_dc/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db"
+/home/IC/Labs/lab_dc/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db
+read_db -container Ref [list $SSLIB $TTLIB $FFLIB]
+Loading db file '/home/IC/Labs/lab_dc/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Created container 'Ref'
+Current container set to 'Ref'
+Loading db file '/home/IC/Labs/lab_dc/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/Labs/lab_dc/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+###################  Read Reference Design Files ######################## 
+read_verilog -container Ref "Topmodule.v"
+No target library specified, default is WORK
+Initializing DesignWare ...
+Initialization Complete
+Loading verilog file '/home/IC/Labs/lab_dc/syn/Topmodule.v'
+1
+######################## set the top Reference Design ######################## 
+set_reference_design Topmodule
+Reference design set to 'Ref:/WORK/Topmodule'
+1
+set_top Topmodule
+Setting top design to 'Ref:/WORK/Topmodule'
+Status:   Elaborating design Topmodule   ...  
+Status:   Elaborating design Traffic_Controller   ...  
+Status:   Elaborating design counter   ...  
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Ref:/WORK/Topmodule'
+Reference design set to 'Ref:/WORK/Topmodule'
+1
+####################### Read Implementation tech libs ######################## 
+read_db -container Imp [list $SSLIB $TTLIB $FFLIB]
+Loading db file '/home/IC/Labs/lab_dc/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db'
+Created container 'Imp'
+Current container set to 'Imp'
+Loading db file '/home/IC/Labs/lab_dc/std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.db'
+Loading db file '/home/IC/Labs/lab_dc/std_cells/scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c.db'
+1
+#################### Read Implementation Design Files ######################## 
+read_verilog -container Imp -netlist "Topmodule_netlist.v"
+No target library specified, default is WORK
+Loading verilog file '/home/IC/Labs/lab_dc/syn/netlists/Topmodule_netlist.v'
+1
+####################  set the top Implementation Design ######################
+set_implementation_design Topmodule
+Implementation design set to 'Imp:/WORK/Topmodule'
+1
+set_top Topmodule
+Setting top design to 'Imp:/WORK/Topmodule'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  3 unlinked power cell(s) with unread pg pins.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'Imp:/WORK/Topmodule'
+Implementation design set to 'Imp:/WORK/Topmodule'
+1
+## matching Compare points
+if {[match]} {
+	echo "Matching Succeed"
+}
+Reference design is 'Ref:/WORK/Topmodule'
+Implementation design is 'Imp:/WORK/Topmodule'
+Status:  Checking designs...
+Status:  Building verification models...
+Status:  Processing Guide Commands...
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+environment         :          2          0          0          0          2
+mark                :          6          0          0          0          6
+transformation
+   map              :          7          0          0          0          7
+   share            :          6          0          0          0          6
+
+SVF files read:
+      ../syn/Topmodule.svf
+
+SVF files produced:
+  /home/IC/Labs/lab_dc/fm/formality1_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+    
+*********************************** Matching Results ***********************************    
+ 20 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 10 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+Matching Succeed
+## verify
+set successful [verify]
+Reference design is 'Ref:/WORK/Topmodule'
+Implementation design is 'Imp:/WORK/Topmodule'
+    
+*********************************** Matching Results ***********************************    
+ 20 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 10 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+Status:  Verifying...
+
+***************************** Synopsys Auto Setup Summary ******************************
+
+!!! Synopsys Auto Setup Mode was enabled. !!!
+!!! Verification results are valid assuming the following setup constraints: !!!
+
+### RTL Interpretation Setup
+   set hdlin_ignore_parallel_case false
+   set hdlin_ignore_full_case false
+   set hdlin_error_on_mismatch_message false
+   set hdlin_ignore_embedded_configuration true
+
+### Undriven Signal Handling Setup
+   set verification_set_undriven_signals synthesis
+
+### Test Logic Setup
+   set verification_verify_directly_undriven_output false
+   For details see report_dont_verify_points and report_constants
+
+
+For further details on Synopsys Auto Setup Mode: Type man synopsys_auto_setup
+****************************************************************************************
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+   ATTENTION: synopsys_auto_setup mode was enabled.
+              See Synopsys Auto Setup Summary for details.
+----------------------------------------------------------
+ Reference design: Ref:/WORK/Topmodule
+ Implementation design: Imp:/WORK/Topmodule
+ 20 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0      12       8       0      20
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+****************************************************************************************
+1
+if {!$successful} {
+diagnose
+analyze_points -failing
+}
+report_passing_points > "reports/passing_points.rpt"
+report_failing_points > "reports/failing_points.rpt"
+report_aborted_points > "reports/aborted_points.rpt"
+report_unverified_points > "reports/unverified_points.rpt"
+start_gui
+     1  source -echo -verbose syn_fm_script.tcl
+1
+1
+fm_shell (verify)> 

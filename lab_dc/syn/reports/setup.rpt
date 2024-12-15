@@ -1,0 +1,1127 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 100
+Design : Topmodule
+Version: K-2015.06
+Date   : Mon Dec 16 03:03:21 2024
+****************************************
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c   Library: scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+Wire Load Model Mode: top
+
+  Startpoint: Sb[1] (input port clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: internal_counter/count_reg[0]
+            (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   30.00      30.00 f
+  Sb[1] (in)                                              0.09      30.09 f
+  U15/Y (AND2X2M)                                         0.37      30.46 f
+  FSM/Sb[1] (Traffic_Controller)                          0.00      30.46 f
+  FSM/U69/Y (INVX2M)                                      0.45      30.91 r
+  FSM/U70/Y (NOR2X2M)                                     0.23      31.13 f
+  FSM/U47/Y (OAI32X2M)                                    0.82      31.95 r
+  FSM/U60/Y (AOI31X2M)                                    0.31      32.25 f
+  FSM/U51/Y (AOI221XLM)                                   0.86      33.12 r
+  FSM/U35/Y (OAI221X1M)                                   0.81      33.93 f
+  FSM/U40/Y (INVX2M)                                      0.54      34.48 r
+  FSM/U86/Y (XNOR2X4M)                                    0.47      34.95 r
+  FSM/load_counter (Traffic_Controller)                   0.00      34.95 r
+  internal_counter/load (counter)                         0.00      34.95 r
+  internal_counter/U3/Y (INVX2M)                          0.39      35.34 f
+  internal_counter/U5/Y (AO22X1M)                         0.57      35.92 f
+  internal_counter/count_reg[0]/D (DFFSQX2M)              0.00      35.92 f
+  data arrival time                                                 35.92
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  internal_counter/count_reg[0]/CK (DFFSQX2M)             0.00      99.75 r
+  library setup time                                     -0.25      99.50
+  data required time                                                99.50
+  --------------------------------------------------------------------------
+  data required time                                                99.50
+  data arrival time                                                -35.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                       63.58
+
+
+  Startpoint: Sb[1] (input port clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: internal_counter/count_reg[4]
+            (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   30.00      30.00 f
+  Sb[1] (in)                                              0.09      30.09 f
+  U15/Y (AND2X2M)                                         0.37      30.46 f
+  FSM/Sb[1] (Traffic_Controller)                          0.00      30.46 f
+  FSM/U69/Y (INVX2M)                                      0.45      30.91 r
+  FSM/U70/Y (NOR2X2M)                                     0.23      31.13 f
+  FSM/U47/Y (OAI32X2M)                                    0.82      31.95 r
+  FSM/U60/Y (AOI31X2M)                                    0.31      32.25 f
+  FSM/U51/Y (AOI221XLM)                                   0.86      33.12 r
+  FSM/U35/Y (OAI221X1M)                                   0.81      33.93 f
+  FSM/U40/Y (INVX2M)                                      0.54      34.48 r
+  FSM/U86/Y (XNOR2X4M)                                    0.47      34.95 r
+  FSM/load_counter (Traffic_Controller)                   0.00      34.95 r
+  internal_counter/load (counter)                         0.00      34.95 r
+  internal_counter/U3/Y (INVX2M)                          0.39      35.34 f
+  internal_counter/U7/Y (AO22X1M)                         0.57      35.92 f
+  internal_counter/count_reg[4]/D (DFFSQX2M)              0.00      35.92 f
+  data arrival time                                                 35.92
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  internal_counter/count_reg[4]/CK (DFFSQX2M)             0.00      99.75 r
+  library setup time                                     -0.25      99.50
+  data required time                                                99.50
+  --------------------------------------------------------------------------
+  data required time                                                99.50
+  data arrival time                                                -35.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                       63.58
+
+
+  Startpoint: Sb[1] (input port clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: internal_counter/count_reg[1]
+            (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   30.00      30.00 f
+  Sb[1] (in)                                              0.09      30.09 f
+  U15/Y (AND2X2M)                                         0.37      30.46 f
+  FSM/Sb[1] (Traffic_Controller)                          0.00      30.46 f
+  FSM/U69/Y (INVX2M)                                      0.45      30.91 r
+  FSM/U70/Y (NOR2X2M)                                     0.23      31.13 f
+  FSM/U47/Y (OAI32X2M)                                    0.82      31.95 r
+  FSM/U60/Y (AOI31X2M)                                    0.31      32.25 f
+  FSM/U51/Y (AOI221XLM)                                   0.86      33.12 r
+  FSM/U35/Y (OAI221X1M)                                   0.81      33.93 f
+  FSM/U40/Y (INVX2M)                                      0.54      34.48 r
+  FSM/U86/Y (XNOR2X4M)                                    0.47      34.95 r
+  FSM/load_counter (Traffic_Controller)                   0.00      34.95 r
+  internal_counter/load (counter)                         0.00      34.95 r
+  internal_counter/U3/Y (INVX2M)                          0.39      35.34 f
+  internal_counter/U9/Y (AO22X1M)                         0.57      35.92 f
+  internal_counter/count_reg[1]/D (DFFSQX2M)              0.00      35.92 f
+  data arrival time                                                 35.92
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  internal_counter/count_reg[1]/CK (DFFSQX2M)             0.00      99.75 r
+  library setup time                                     -0.25      99.50
+  data required time                                                99.50
+  --------------------------------------------------------------------------
+  data required time                                                99.50
+  data arrival time                                                -35.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                       63.58
+
+
+  Startpoint: Sb[1] (input port clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: internal_counter/count_reg[2]
+            (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   30.00      30.00 f
+  Sb[1] (in)                                              0.09      30.09 f
+  U15/Y (AND2X2M)                                         0.37      30.46 f
+  FSM/Sb[1] (Traffic_Controller)                          0.00      30.46 f
+  FSM/U69/Y (INVX2M)                                      0.45      30.91 r
+  FSM/U70/Y (NOR2X2M)                                     0.23      31.13 f
+  FSM/U47/Y (OAI32X2M)                                    0.82      31.95 r
+  FSM/U60/Y (AOI31X2M)                                    0.31      32.25 f
+  FSM/U51/Y (AOI221XLM)                                   0.86      33.12 r
+  FSM/U35/Y (OAI221X1M)                                   0.81      33.93 f
+  FSM/U40/Y (INVX2M)                                      0.54      34.48 r
+  FSM/U86/Y (XNOR2X4M)                                    0.47      34.95 r
+  FSM/load_counter (Traffic_Controller)                   0.00      34.95 r
+  internal_counter/load (counter)                         0.00      34.95 r
+  internal_counter/U3/Y (INVX2M)                          0.39      35.34 f
+  internal_counter/U4/Y (AO22X1M)                         0.57      35.92 f
+  internal_counter/count_reg[2]/D (DFFSQX2M)              0.00      35.92 f
+  data arrival time                                                 35.92
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  internal_counter/count_reg[2]/CK (DFFSQX2M)             0.00      99.75 r
+  library setup time                                     -0.25      99.50
+  data required time                                                99.50
+  --------------------------------------------------------------------------
+  data required time                                                99.50
+  data arrival time                                                -35.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                       63.58
+
+
+  Startpoint: Sb[1] (input port clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: internal_counter/count_reg[3]
+            (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   30.00      30.00 f
+  Sb[1] (in)                                              0.09      30.09 f
+  U15/Y (AND2X2M)                                         0.37      30.46 f
+  FSM/Sb[1] (Traffic_Controller)                          0.00      30.46 f
+  FSM/U69/Y (INVX2M)                                      0.45      30.91 r
+  FSM/U70/Y (NOR2X2M)                                     0.23      31.13 f
+  FSM/U47/Y (OAI32X2M)                                    0.82      31.95 r
+  FSM/U60/Y (AOI31X2M)                                    0.31      32.25 f
+  FSM/U51/Y (AOI221XLM)                                   0.86      33.12 r
+  FSM/U35/Y (OAI221X1M)                                   0.81      33.93 f
+  FSM/U40/Y (INVX2M)                                      0.54      34.48 r
+  FSM/U86/Y (XNOR2X4M)                                    0.47      34.95 r
+  FSM/load_counter (Traffic_Controller)                   0.00      34.95 r
+  internal_counter/load (counter)                         0.00      34.95 r
+  internal_counter/U3/Y (INVX2M)                          0.39      35.34 f
+  internal_counter/U8/Y (AO22X1M)                         0.57      35.92 f
+  internal_counter/count_reg[3]/D (DFFSQX2M)              0.00      35.92 f
+  data arrival time                                                 35.92
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  internal_counter/count_reg[3]/CK (DFFSQX2M)             0.00      99.75 r
+  library setup time                                     -0.25      99.50
+  data required time                                                99.50
+  --------------------------------------------------------------------------
+  data required time                                                99.50
+  data arrival time                                                -35.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                       63.58
+
+
+  Startpoint: Sb[1] (input port clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: FSM/current_state_reg[2]
+            (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   30.00      30.00 f
+  Sb[1] (in)                                              0.09      30.09 f
+  U15/Y (AND2X2M)                                         0.37      30.46 f
+  FSM/Sb[1] (Traffic_Controller)                          0.00      30.46 f
+  FSM/U69/Y (INVX2M)                                      0.45      30.91 r
+  FSM/U70/Y (NOR2X2M)                                     0.23      31.13 f
+  FSM/U47/Y (OAI32X2M)                                    0.82      31.95 r
+  FSM/U60/Y (AOI31X2M)                                    0.31      32.25 f
+  FSM/U51/Y (AOI221XLM)                                   0.86      33.12 r
+  FSM/U35/Y (OAI221X1M)                                   0.81      33.93 f
+  FSM/current_state_reg[2]/D (DFFRX1M)                    0.00      33.93 f
+  data arrival time                                                 33.93
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  FSM/current_state_reg[2]/CK (DFFRX1M)                   0.00      99.75 r
+  library setup time                                     -0.29      99.46
+  data required time                                                99.46
+  --------------------------------------------------------------------------
+  data required time                                                99.46
+  data arrival time                                                -33.93
+  --------------------------------------------------------------------------
+  slack (MET)                                                       65.53
+
+
+  Startpoint: Sa[1] (input port clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: FSM/current_state_reg[0]
+            (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   30.00      30.00 f
+  Sa[1] (in)                                              0.09      30.09 f
+  U16/Y (AND2X2M)                                         0.34      30.43 f
+  FSM/Sa[1] (Traffic_Controller)                          0.00      30.43 f
+  FSM/U63/Y (INVX2M)                                      0.50      30.92 r
+  FSM/U74/Y (NAND2X2M)                                    0.29      31.21 f
+  FSM/U52/Y (AOI32X1M)                                    0.66      31.87 r
+  FSM/U44/Y (NAND3X2M)                                    0.34      32.21 f
+  FSM/U84/Y (NAND2BXLM)                                   0.63      32.84 f
+  FSM/U38/Y (OAI221X1M)                                   0.35      33.19 r
+  FSM/U91/Y (AOI22X1M)                                    0.27      33.46 f
+  FSM/U88/Y (NAND4X2M)                                    0.24      33.71 r
+  FSM/current_state_reg[0]/D (DFFRX1M)                    0.00      33.71 r
+  data arrival time                                                 33.71
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  FSM/current_state_reg[0]/CK (DFFRX1M)                   0.00      99.75 r
+  library setup time                                     -0.26      99.49
+  data required time                                                99.49
+  --------------------------------------------------------------------------
+  data required time                                                99.49
+  data arrival time                                                -33.71
+  --------------------------------------------------------------------------
+  slack (MET)                                                       65.79
+
+
+  Startpoint: Sb[1] (input port clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: FSM/current_state_reg[1]
+            (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: INREG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                   30.00      30.00 r
+  Sb[1] (in)                                              0.14      30.14 r
+  U15/Y (AND2X2M)                                         0.49      30.63 r
+  FSM/Sb[1] (Traffic_Controller)                          0.00      30.63 r
+  FSM/U69/Y (INVX2M)                                      0.36      30.99 f
+  FSM/U70/Y (NOR2X2M)                                     0.42      31.41 r
+  FSM/U47/Y (OAI32X2M)                                    0.33      31.74 f
+  FSM/U18/Y (NOR3BX4M)                                    0.76      32.50 r
+  FSM/U37/Y (OAI32X1M)                                    0.38      32.88 f
+  FSM/U94/Y (AOI21X2M)                                    0.33      33.20 r
+  FSM/U92/Y (NAND4X2M)                                    0.24      33.45 f
+  FSM/current_state_reg[1]/D (DFFRX1M)                    0.00      33.45 f
+  data arrival time                                                 33.45
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  FSM/current_state_reg[1]/CK (DFFRX1M)                   0.00      99.75 r
+  library setup time                                     -0.19      99.56
+  data required time                                                99.56
+  --------------------------------------------------------------------------
+  data required time                                                99.56
+  data arrival time                                                -33.45
+  --------------------------------------------------------------------------
+  slack (MET)                                                       66.11
+
+
+  Startpoint: FSM/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: Tc[2] (output port clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[1]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[1]/Q (DFFRX1M)                    1.00       1.00 r
+  FSM/U24/Y (NOR3X2M)                                     0.27       1.28 f
+  FSM/U33/Y (NOR2XLM)                                     0.80       2.07 r
+  FSM/U15/Y (AND3X1M)                                     0.61       2.69 r
+  FSM/U16/Y (NAND3BX2M)                                   0.23       2.92 f
+  FSM/U14/Y (CLKBUFX8M)                                   0.91       3.83 f
+  FSM/Tc[2] (Traffic_Controller)                          0.00       3.83 f
+  Tc[2] (out)                                             0.00       3.83 f
+  data arrival time                                                  3.83
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  output external delay                                 -30.00      69.75
+  data required time                                                69.75
+  --------------------------------------------------------------------------
+  data required time                                                69.75
+  data arrival time                                                 -3.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                       65.92
+
+
+  Startpoint: FSM/current_state_reg[0]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: Ta[2] (output port clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[0]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[0]/Q (DFFRX1M)                    1.00       1.00 r
+  FSM/U20/Y (NOR3X2M)                                     0.28       1.28 f
+  FSM/U34/Y (NOR2X1M)                                     0.74       2.02 r
+  FSM/U6/Y (NOR3BX4M)                                     0.76       2.78 r
+  FSM/U4/Y (NAND3X12M)                                    0.77       3.54 f
+  FSM/Ta[2] (Traffic_Controller)                          0.00       3.54 f
+  Ta[2] (out)                                             0.00       3.54 f
+  data arrival time                                                  3.54
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  output external delay                                 -30.00      69.75
+  data required time                                                69.75
+  --------------------------------------------------------------------------
+  data required time                                                69.75
+  data arrival time                                                 -3.54
+  --------------------------------------------------------------------------
+  slack (MET)                                                       66.21
+
+
+  Startpoint: FSM/current_state_reg[0]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: Tb[2] (output port clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[0]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[0]/Q (DFFRX1M)                    1.00       1.00 r
+  FSM/U20/Y (NOR3X2M)                                     0.28       1.28 f
+  FSM/U34/Y (NOR2X1M)                                     0.74       2.02 r
+  FSM/U6/Y (NOR3BX4M)                                     0.76       2.78 r
+  FSM/U5/Y (NAND3X12M)                                    0.77       3.54 f
+  FSM/Tb[2] (Traffic_Controller)                          0.00       3.54 f
+  Tb[2] (out)                                             0.00       3.54 f
+  data arrival time                                                  3.54
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  output external delay                                 -30.00      69.75
+  data required time                                                69.75
+  --------------------------------------------------------------------------
+  data required time                                                69.75
+  data arrival time                                                 -3.54
+  --------------------------------------------------------------------------
+  slack (MET)                                                       66.21
+
+
+  Startpoint: FSM/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: Td[2] (output port clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[1]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[1]/Q (DFFRX1M)                    1.00       1.00 r
+  FSM/U24/Y (NOR3X2M)                                     0.27       1.28 f
+  FSM/U33/Y (NOR2XLM)                                     0.80       2.07 r
+  FSM/U15/Y (AND3X1M)                                     0.61       2.69 r
+  FSM/U7/Y (NAND3X12M)                                    0.70       3.39 f
+  FSM/Td[2] (Traffic_Controller)                          0.00       3.39 f
+  Td[2] (out)                                             0.00       3.39 f
+  data arrival time                                                  3.39
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  output external delay                                 -30.00      69.75
+  data required time                                                69.75
+  --------------------------------------------------------------------------
+  data required time                                                69.75
+  data arrival time                                                 -3.39
+  --------------------------------------------------------------------------
+  slack (MET)                                                       66.36
+
+
+  Startpoint: FSM/current_state_reg[2]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: Tc[0] (output port clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[2]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[2]/Q (DFFRX1M)                    0.86       0.86 f
+  FSM/U9/Y (NOR3X2M)                                      0.74       1.60 r
+  FSM/U10/Y (INVX2M)                                      0.43       2.03 f
+  FSM/U8/Y (CLKINVX8M)                                    0.83       2.86 r
+  FSM/Tc[0] (Traffic_Controller)                          0.00       2.86 r
+  Tc[0] (out)                                             0.00       2.86 r
+  data arrival time                                                  2.86
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  output external delay                                 -30.00      69.75
+  data required time                                                69.75
+  --------------------------------------------------------------------------
+  data required time                                                69.75
+  data arrival time                                                 -2.86
+  --------------------------------------------------------------------------
+  slack (MET)                                                       66.89
+
+
+  Startpoint: FSM/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: Ta[1] (output port clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[1]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[1]/Q (DFFRX1M)                    0.85       0.85 f
+  FSM/U24/Y (NOR3X2M)                                     0.65       1.49 r
+  FSM/U23/Y (INVX2M)                                      0.48       1.97 f
+  FSM/U22/Y (CLKINVX8M)                                   0.84       2.81 r
+  FSM/Ta[1] (Traffic_Controller)                          0.00       2.81 r
+  Ta[1] (out)                                             0.00       2.81 r
+  data arrival time                                                  2.81
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  output external delay                                 -30.00      69.75
+  data required time                                                69.75
+  --------------------------------------------------------------------------
+  data required time                                                69.75
+  data arrival time                                                 -2.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                       66.94
+
+
+  Startpoint: FSM/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: Tb[1] (output port clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[1]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[1]/Q (DFFRX1M)                    0.85       0.85 f
+  FSM/U12/Y (NOR3X2M)                                     0.65       1.49 r
+  FSM/U13/Y (INVX2M)                                      0.44       1.93 f
+  FSM/U11/Y (CLKINVX8M)                                   0.85       2.78 r
+  FSM/Tb[1] (Traffic_Controller)                          0.00       2.78 r
+  Tb[1] (out)                                             0.00       2.78 r
+  data arrival time                                                  2.78
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  output external delay                                 -30.00      69.75
+  data required time                                                69.75
+  --------------------------------------------------------------------------
+  data required time                                                69.75
+  data arrival time                                                 -2.78
+  --------------------------------------------------------------------------
+  slack (MET)                                                       66.97
+
+
+  Startpoint: FSM/current_state_reg[0]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: Tc[1] (output port clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[0]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[0]/Q (DFFRX1M)                    0.85       0.85 f
+  FSM/U20/Y (NOR3X2M)                                     0.66       1.51 r
+  FSM/U21/Y (INVX2M)                                      0.40       1.91 f
+  FSM/U19/Y (CLKINVX8M)                                   0.84       2.75 r
+  FSM/Tc[1] (Traffic_Controller)                          0.00       2.75 r
+  Tc[1] (out)                                             0.00       2.75 r
+  data arrival time                                                  2.75
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  output external delay                                 -30.00      69.75
+  data required time                                                69.75
+  --------------------------------------------------------------------------
+  data required time                                                69.75
+  data arrival time                                                 -2.75
+  --------------------------------------------------------------------------
+  slack (MET)                                                       67.00
+
+
+  Startpoint: FSM/current_state_reg[2]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: Ta[0] (output port clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[2]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[2]/Q (DFFRX1M)                    0.86       0.86 f
+  FSM/U28/Y (NOR3X2M)                                     0.65       1.51 r
+  FSM/U29/Y (INVX2M)                                      0.40       1.90 f
+  FSM/U27/Y (CLKINVX8M)                                   0.82       2.72 r
+  FSM/Ta[0] (Traffic_Controller)                          0.00       2.72 r
+  Ta[0] (out)                                             0.00       2.72 r
+  data arrival time                                                  2.72
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  output external delay                                 -30.00      69.75
+  data required time                                                69.75
+  --------------------------------------------------------------------------
+  data required time                                                69.75
+  data arrival time                                                 -2.72
+  --------------------------------------------------------------------------
+  slack (MET)                                                       67.03
+
+
+  Startpoint: FSM/current_state_reg[2]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: Td[1] (output port clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[2]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[2]/QN (DFFRX1M)                   0.78       0.78 f
+  FSM/U31/Y (NOR3X2M)                                     0.68       1.46 r
+  FSM/U32/Y (INVX2M)                                      0.35       1.81 f
+  FSM/U30/Y (CLKINVX8M)                                   0.84       2.65 r
+  FSM/Td[1] (Traffic_Controller)                          0.00       2.65 r
+  Td[1] (out)                                             0.00       2.65 r
+  data arrival time                                                  2.65
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  output external delay                                 -30.00      69.75
+  data required time                                                69.75
+  --------------------------------------------------------------------------
+  data required time                                                69.75
+  data arrival time                                                 -2.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                       67.10
+
+
+  Startpoint: FSM/current_state_reg[2]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: Tb[0] (output port clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[2]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[2]/Q (DFFRX1M)                    1.02       1.02 r
+  FSM/U3/Y (OR3X2M)                                       0.64       1.66 r
+  FSM/U17/Y (CLKINVX8M)                                   0.95       2.61 f
+  FSM/Tb[0] (Traffic_Controller)                          0.00       2.61 f
+  Tb[0] (out)                                             0.00       2.61 f
+  data arrival time                                                  2.61
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  output external delay                                 -30.00      69.75
+  data required time                                                69.75
+  --------------------------------------------------------------------------
+  data required time                                                69.75
+  data arrival time                                                 -2.61
+  --------------------------------------------------------------------------
+  slack (MET)                                                       67.14
+
+
+  Startpoint: FSM/current_state_reg[2]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: Td[0] (output port clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: REGOUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[2]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[2]/Q (DFFRX1M)                    0.86       0.86 f
+  FSM/U25/Y (OR3X2M)                                      0.43       1.29 f
+  FSM/U26/Y (INVX8M)                                      0.81       2.10 r
+  FSM/Td[0] (Traffic_Controller)                          0.00       2.10 r
+  Td[0] (out)                                             0.00       2.10 r
+  data arrival time                                                  2.10
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  output external delay                                 -30.00      69.75
+  data required time                                                69.75
+  --------------------------------------------------------------------------
+  data required time                                                69.75
+  data arrival time                                                 -2.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                       67.65
+
+
+  Startpoint: FSM/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: internal_counter/count_reg[0]
+            (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: TRAFFIC_CONTROLLER_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[1]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[1]/Q (DFFRX1M)                    1.00       1.00 r
+  FSM/U24/Y (NOR3X2M)                                     0.27       1.28 f
+  FSM/U33/Y (NOR2XLM)                                     0.80       2.07 r
+  FSM/U46/Y (AOI21X2M)                                    0.25       2.32 f
+  FSM/U51/Y (AOI221XLM)                                   0.75       3.08 r
+  FSM/U35/Y (OAI221X1M)                                   0.81       3.89 f
+  FSM/U40/Y (INVX2M)                                      0.54       4.44 r
+  FSM/U86/Y (XNOR2X4M)                                    0.47       4.91 r
+  FSM/load_counter (Traffic_Controller)                   0.00       4.91 r
+  internal_counter/load (counter)                         0.00       4.91 r
+  internal_counter/U3/Y (INVX2M)                          0.39       5.30 f
+  internal_counter/U5/Y (AO22X1M)                         0.57       5.88 f
+  internal_counter/count_reg[0]/D (DFFSQX2M)              0.00       5.88 f
+  data arrival time                                                  5.88
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  internal_counter/count_reg[0]/CK (DFFSQX2M)             0.00      99.75 r
+  library setup time                                     -0.25      99.50
+  data required time                                                99.50
+  --------------------------------------------------------------------------
+  data required time                                                99.50
+  data arrival time                                                 -5.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                       93.62
+
+
+  Startpoint: FSM/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: internal_counter/count_reg[4]
+            (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: TRAFFIC_CONTROLLER_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[1]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[1]/Q (DFFRX1M)                    1.00       1.00 r
+  FSM/U24/Y (NOR3X2M)                                     0.27       1.28 f
+  FSM/U33/Y (NOR2XLM)                                     0.80       2.07 r
+  FSM/U46/Y (AOI21X2M)                                    0.25       2.32 f
+  FSM/U51/Y (AOI221XLM)                                   0.75       3.08 r
+  FSM/U35/Y (OAI221X1M)                                   0.81       3.89 f
+  FSM/U40/Y (INVX2M)                                      0.54       4.44 r
+  FSM/U86/Y (XNOR2X4M)                                    0.47       4.91 r
+  FSM/load_counter (Traffic_Controller)                   0.00       4.91 r
+  internal_counter/load (counter)                         0.00       4.91 r
+  internal_counter/U3/Y (INVX2M)                          0.39       5.30 f
+  internal_counter/U7/Y (AO22X1M)                         0.57       5.88 f
+  internal_counter/count_reg[4]/D (DFFSQX2M)              0.00       5.88 f
+  data arrival time                                                  5.88
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  internal_counter/count_reg[4]/CK (DFFSQX2M)             0.00      99.75 r
+  library setup time                                     -0.25      99.50
+  data required time                                                99.50
+  --------------------------------------------------------------------------
+  data required time                                                99.50
+  data arrival time                                                 -5.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                       93.62
+
+
+  Startpoint: FSM/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: internal_counter/count_reg[1]
+            (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: TRAFFIC_CONTROLLER_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[1]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[1]/Q (DFFRX1M)                    1.00       1.00 r
+  FSM/U24/Y (NOR3X2M)                                     0.27       1.28 f
+  FSM/U33/Y (NOR2XLM)                                     0.80       2.07 r
+  FSM/U46/Y (AOI21X2M)                                    0.25       2.32 f
+  FSM/U51/Y (AOI221XLM)                                   0.75       3.08 r
+  FSM/U35/Y (OAI221X1M)                                   0.81       3.89 f
+  FSM/U40/Y (INVX2M)                                      0.54       4.44 r
+  FSM/U86/Y (XNOR2X4M)                                    0.47       4.91 r
+  FSM/load_counter (Traffic_Controller)                   0.00       4.91 r
+  internal_counter/load (counter)                         0.00       4.91 r
+  internal_counter/U3/Y (INVX2M)                          0.39       5.30 f
+  internal_counter/U9/Y (AO22X1M)                         0.57       5.88 f
+  internal_counter/count_reg[1]/D (DFFSQX2M)              0.00       5.88 f
+  data arrival time                                                  5.88
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  internal_counter/count_reg[1]/CK (DFFSQX2M)             0.00      99.75 r
+  library setup time                                     -0.25      99.50
+  data required time                                                99.50
+  --------------------------------------------------------------------------
+  data required time                                                99.50
+  data arrival time                                                 -5.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                       93.62
+
+
+  Startpoint: FSM/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: internal_counter/count_reg[2]
+            (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: TRAFFIC_CONTROLLER_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[1]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[1]/Q (DFFRX1M)                    1.00       1.00 r
+  FSM/U24/Y (NOR3X2M)                                     0.27       1.28 f
+  FSM/U33/Y (NOR2XLM)                                     0.80       2.07 r
+  FSM/U46/Y (AOI21X2M)                                    0.25       2.32 f
+  FSM/U51/Y (AOI221XLM)                                   0.75       3.08 r
+  FSM/U35/Y (OAI221X1M)                                   0.81       3.89 f
+  FSM/U40/Y (INVX2M)                                      0.54       4.44 r
+  FSM/U86/Y (XNOR2X4M)                                    0.47       4.91 r
+  FSM/load_counter (Traffic_Controller)                   0.00       4.91 r
+  internal_counter/load (counter)                         0.00       4.91 r
+  internal_counter/U3/Y (INVX2M)                          0.39       5.30 f
+  internal_counter/U4/Y (AO22X1M)                         0.57       5.88 f
+  internal_counter/count_reg[2]/D (DFFSQX2M)              0.00       5.88 f
+  data arrival time                                                  5.88
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  internal_counter/count_reg[2]/CK (DFFSQX2M)             0.00      99.75 r
+  library setup time                                     -0.25      99.50
+  data required time                                                99.50
+  --------------------------------------------------------------------------
+  data required time                                                99.50
+  data arrival time                                                 -5.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                       93.62
+
+
+  Startpoint: FSM/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: internal_counter/count_reg[3]
+            (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: TRAFFIC_CONTROLLER_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[1]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[1]/Q (DFFRX1M)                    1.00       1.00 r
+  FSM/U24/Y (NOR3X2M)                                     0.27       1.28 f
+  FSM/U33/Y (NOR2XLM)                                     0.80       2.07 r
+  FSM/U46/Y (AOI21X2M)                                    0.25       2.32 f
+  FSM/U51/Y (AOI221XLM)                                   0.75       3.08 r
+  FSM/U35/Y (OAI221X1M)                                   0.81       3.89 f
+  FSM/U40/Y (INVX2M)                                      0.54       4.44 r
+  FSM/U86/Y (XNOR2X4M)                                    0.47       4.91 r
+  FSM/load_counter (Traffic_Controller)                   0.00       4.91 r
+  internal_counter/load (counter)                         0.00       4.91 r
+  internal_counter/U3/Y (INVX2M)                          0.39       5.30 f
+  internal_counter/U8/Y (AO22X1M)                         0.57       5.88 f
+  internal_counter/count_reg[3]/D (DFFSQX2M)              0.00       5.88 f
+  data arrival time                                                  5.88
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  internal_counter/count_reg[3]/CK (DFFSQX2M)             0.00      99.75 r
+  library setup time                                     -0.25      99.50
+  data required time                                                99.50
+  --------------------------------------------------------------------------
+  data required time                                                99.50
+  data arrival time                                                 -5.88
+  --------------------------------------------------------------------------
+  slack (MET)                                                       93.62
+
+
+  Startpoint: FSM/current_state_reg[0]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: FSM/current_state_reg[0]
+            (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: TRAFFIC_CONTROLLER_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[0]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[0]/Q (DFFRX1M)                    1.00       1.00 r
+  FSM/U20/Y (NOR3X2M)                                     0.28       1.28 f
+  FSM/U21/Y (INVX2M)                                      0.42       1.70 r
+  FSM/U19/Y (CLKINVX8M)                                   0.93       2.63 f
+  FSM/U84/Y (NAND2BXLM)                                   0.77       3.40 r
+  FSM/U38/Y (OAI221X1M)                                   0.42       3.82 f
+  FSM/U91/Y (AOI22X1M)                                    0.41       4.23 r
+  FSM/U88/Y (NAND4X2M)                                    0.25       4.48 f
+  FSM/current_state_reg[0]/D (DFFRX1M)                    0.00       4.48 f
+  data arrival time                                                  4.48
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  FSM/current_state_reg[0]/CK (DFFRX1M)                   0.00      99.75 r
+  library setup time                                     -0.19      99.56
+  data required time                                                99.56
+  --------------------------------------------------------------------------
+  data required time                                                99.56
+  data arrival time                                                 -4.48
+  --------------------------------------------------------------------------
+  slack (MET)                                                       95.08
+
+
+  Startpoint: FSM/current_state_reg[1]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: FSM/current_state_reg[2]
+            (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: TRAFFIC_CONTROLLER_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[1]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[1]/Q (DFFRX1M)                    1.00       1.00 r
+  FSM/U24/Y (NOR3X2M)                                     0.27       1.28 f
+  FSM/U33/Y (NOR2XLM)                                     0.80       2.07 r
+  FSM/U46/Y (AOI21X2M)                                    0.25       2.32 f
+  FSM/U51/Y (AOI221XLM)                                   0.75       3.08 r
+  FSM/U35/Y (OAI221X1M)                                   0.81       3.89 f
+  FSM/current_state_reg[2]/D (DFFRX1M)                    0.00       3.89 f
+  data arrival time                                                  3.89
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  FSM/current_state_reg[2]/CK (DFFRX1M)                   0.00      99.75 r
+  library setup time                                     -0.29      99.46
+  data required time                                                99.46
+  --------------------------------------------------------------------------
+  data required time                                                99.46
+  data arrival time                                                 -3.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                       95.57
+
+
+  Startpoint: FSM/current_state_reg[0]
+              (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Endpoint: FSM/current_state_reg[1]
+            (rising edge-triggered flip-flop clocked by TRAFFIC_CONTROLLER_CLK)
+  Path Group: TRAFFIC_CONTROLLER_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  Topmodule          tsmc13_wl10           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  FSM/current_state_reg[0]/CK (DFFRX1M)                   0.00       0.00 r
+  FSM/current_state_reg[0]/Q (DFFRX1M)                    0.85       0.85 f
+  FSM/U20/Y (NOR3X2M)                                     0.66       1.51 r
+  FSM/U21/Y (INVX2M)                                      0.40       1.91 f
+  FSM/U19/Y (CLKINVX8M)                                   0.84       2.75 r
+  FSM/U84/Y (NAND2BXLM)                                   0.61       3.36 f
+  FSM/U92/Y (NAND4X2M)                                    0.29       3.65 r
+  FSM/current_state_reg[1]/D (DFFRX1M)                    0.00       3.65 r
+  data arrival time                                                  3.65
+
+  clock TRAFFIC_CONTROLLER_CLK (rise edge)              100.00     100.00
+  clock network delay (ideal)                             0.00     100.00
+  clock uncertainty                                      -0.25      99.75
+  FSM/current_state_reg[1]/CK (DFFRX1M)                   0.00      99.75 r
+  library setup time                                     -0.26      99.49
+  data required time                                                99.49
+  --------------------------------------------------------------------------
+  data required time                                                99.49
+  data arrival time                                                 -3.65
+  --------------------------------------------------------------------------
+  slack (MET)                                                       95.84
+
+
+1
